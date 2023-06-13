@@ -273,8 +273,8 @@ class SystemSettings extends DBConnection
     }
 }
 
-$settings = new SystemSettings();
-$settings->loadSystemInfo();
+$_settings = new SystemSettings();
+$_settings->loadSystemInfo();
 $action = !isset($_GET['f']) ? "none" : strtolower($_GET['f']);
 $sysset = new SystemSettings();
 
