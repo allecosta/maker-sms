@@ -23,7 +23,7 @@ class Users extends DBConnection
         $data = "";
 
         if (isset($oldPassword)) {
-            if (md5($oldPassword) != $this->settings->userdata('password')) {
+            if (md5($oldPassword) != $this->settings->userData('password')) {
                 return 4;
             }
         }
@@ -73,7 +73,7 @@ class Users extends DBConnection
             if ($query) {
                 $this->settings->setFlashData("success", "Detalhes do usuário atualizado com sucesso!");
 
-                if ($id == $this->settings->userdata("id")) {
+                if ($id == $this->settings->userData("id")) {
                     foreach ($_POST as $key => $value) {
                         if ($key != "id") {
                             if (empty($data)) {$data .= " , ";}
@@ -192,7 +192,7 @@ class Users extends DBConnection
         return json_encode($resp);
     }
 
-    public function saveSusers() 
+    public function savesUsers() 
     {
         extract($_POST);
 
@@ -256,7 +256,7 @@ switch ($action) {
     //     echo $users->saveFusers();
     //     break;
     case "ssave":
-        echo $users->saveSusers();
+        echo $users->savesUsers();
         break;
     case "delete":
         echo $users->deleteUsers();

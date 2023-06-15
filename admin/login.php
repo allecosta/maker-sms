@@ -22,7 +22,7 @@
     </style>
     <h1 class="text-center py-5 login-title"><strong><?= $_settings->info("name"); ?></strong></h1>
     <div class="login-box">
-        <div class="card card-putline card-primary">
+        <div class="card card-outline card-primary">
             <div class="card-header text-center">
                 <a href="./" class="h1"><strong>Login</strong></a>
             </div>

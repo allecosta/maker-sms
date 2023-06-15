@@ -11,9 +11,9 @@
             require_once '../inc/topBarNav.php';
             require_once '../inc/navigation.php';
         ?> 
-        <?php if ($settings->chkFlashData("success")): ?>
+        <?php if ($_settings->chkFlashData("success")): ?>
             <script>
-                alert_toast("<?= $settings->flashData("success"); ?>", "success")
+                alert_toast("<?= $_settings->flashData("success"); ?>", "success")
             </script>
         <?php endif; ?>
 

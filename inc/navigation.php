@@ -1,25 +1,26 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="<?= BASE_URL ?>admin" class="brand-link text-sm">
-        <img src="<?= validateImage($_settings->info("logo")) ?>" alt="Logo da loja"
-            class="brand-image img-circle elevation-3"
-            style="opacity: .8; width: 2.5rem; height: 2.5rem; max-height: unset">
+        <img src="<?= validateImage($_settings->info("logo")) ?>" alt="Logo da loja" 
+            class="brand-image img-circle elevation-3" 
+            style="opacity: .8; width: 2.5rem; height: 2.5rem; max-height: unset;">
         <span class="brand-text font-weight-light"><?= $_settings->info("short_name") ?></span>
     </a>
     <div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-transiton os-host-scrollbar-horizontal-hidden">
         <div class="os-resize-observer-host observed">
-            <div class="os-resize-observer" style="left: 0px; right: auto"></div>
+            <div class="os-resize-observer" style="left: 0px; right: auto;"></div>
         </div>
-        <div class="os-size-auto-observer observed" style="height: calc(100% + 1); float: left;">
+        <div class="os-size-auto-observer observed" style="height: calc(100% + 1px); float: left;">
             <div class="os-resize-observer"></div>
         </div>
         <div class="os-content-glue" style="margin: 0px -8px; width: 249px; height: 646px;"></div>
         <div class="os-padding">
             <div class="os-viewport os-viewport-native-scrollbars-invisible" style=" overflow-y: scroll;">
-                <div class="os-content" style="padding: 0px 8px; height: 100%; width: 100%">
+                <div class="os-content" style="padding: 0px 8px; height: 100%; width: 100%;">
                     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                         <div class="image">
                             <img src="<?= validateImage($_settings->userData("avatar")) ?>" 
-                                class="img-circle elevation-2" style="height: 2rem; object-fit: cover" alt="Imagem do usuário">
+                                class="img-circle elevation-2" 
+                                style="height: 2rem; object-fit: cover;" alt="Imagem do usuário">
                         </div>
                         <div class="info">
                             <a href="<?= BASE_URL ?>admin/?page=user" 

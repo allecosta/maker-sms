@@ -1,21 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary br-gradient sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient sticky-top">
     <div class="container px-4 px-lg-5">
         <button class="navbar-toggler btn btn-sm" 
-            type="button" dta-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
+            type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="./">
-                <img src="<?= validateImage($_settings->info("logo")) ?>" width="30" height="30" 
-                    class="d-inline-block align-top" loading="lazy">
-                <?= $_settings->info("short_name") ?>
+            <img src="<?= validateImage($_settings->info("logo")) ?>" width="30" height="30" 
+                class="d-inline-block align-top" loading="lazy">
+            <?= $_settings->info("short_name") ?>
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item">
                     <a href="./" class="nav-link" aria-current="page">Início</a>
                 </li>
-                <?php if (isset($_SESSION['userData']['id']) && $_settings->userData("type") == 2): ?>
+                <?php if (isset($_SESSION['userdata']['id']) && $_settings->userData("type") == 2): ?>
                     <li class="nav-item">
                         <a class="nav-link" href="./?page=my_transactions">Minhas Transações</a>
                     </li>
@@ -25,7 +24,7 @@
                 </li>
             </ul>
             <div class="navbar-nav ml-auto d-flex align-items-center">
-                <?php if (isset($_SESSION['userData']['id']) && $_settings->userData("type") == 2): ?>
+                <?php if (isset($_SESSION['userdata']['id']) && $_settings->userData("type") == 2): ?>
                     <a href="./?page=update_account" class="text-light nav-link">
                         <strong>Olá, <?= $_settings->userData("firstname") ?>!</strong>
                     </a>
@@ -39,13 +38,12 @@
 </nav>
 <script>
     $(function() {
-        $("#navbarResponsive").on("show.bs,collapse", function() {
+        $("#navbarResponsive").on("show.bs.collapse", function() {
             $("#mainNav").addClass("navbar-shrink")
         })
-
         $("navbarResponsive").on("hidden.bs.collapse", function() {
             if ($("body").offset.top == 0) {
-                $("mainNav").removeClass("navbar-shrink")
+                $("#mainNav").removeClass("navbar-shrink")
             }
         })
     })
@@ -56,7 +54,7 @@
         let sTxt = $("[name = 'search']").val()
 
         if (sTxt != "") {
-            location.href = "./?p=product&search =" + sTxt;
+            location.href = "./?p=products&search =" + sTxt;
         }
     })
 </script>

@@ -1,4 +1,10 @@
 <head>
+    <style>
+        :root {
+            --bg-img: url('<?= validateImage($_settings->info("cover")) ?>');
+        }
+
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   	<title><?= $_settings->info('title') != false ? $_settings->info('title').' | ' : '' ?><?= $_settings->info('name') ?></title>
@@ -42,28 +48,7 @@
      <!-- SweetAlert2 -->
     <link rel="stylesheet" href="<?= BASE_URL ?>plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
 
-    <!-- jQuery -->
-    <script src="<?= BASE_URL ?>plugins/jquery/jquery.min.js"></script>
-
-    <!-- jQuery UI 1.11.4 -->
-    <script src="<?= BASE_URL ?>plugins/jquery-ui/jquery-ui.min.js"></script>
-
-    <!-- SweetAlert2 -->
-    <script src="<?= BASE_URL ?>plugins/sweetalert2/sweetalert2.min.js"></script>
-
-    <!-- Toastr -->
-    <script src="<?= BASE_URL ?>plugins/toastr/toastr.min.js"></script>
-    <script>
-        var _base_url_ = '<?= BASE_URL ?>';
-    </script>
-    <script src="<?= BASE_URL ?>dist/js/script.js"></script>
-    <script src="<?= BASE_URL ?>assets/js/scripts.js"></script>
-    
     <style>
-        :root {
-            --bg-img: url('<?= validateImage($_settings->info("cover")) ?>');
-        }
-
         @keyframes chartjs-render-animation {
             from {
                 opacity: .99 
@@ -106,7 +91,26 @@
             left: 0;
             top:0
         }
+    </style>
 
+    <!-- jQuery -->
+    <script src="<?= BASE_URL ?>plugins/jquery/jquery.min.js"></script>
+
+    <!-- jQuery UI 1.11.4 -->
+    <script src="<?= BASE_URL ?>plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="<?= BASE_URL ?>plugins/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="<?= BASE_URL ?>plugins/toastr/toastr.min.js"></script>
+    <script>
+        var _base_url_ = '<?= BASE_URL ?>';
+    </script>
+    <script src="<?= BASE_URL ?>dist/js/script.js"></script>
+    <script src="<?= BASE_URL ?>assets/js/scripts.js"></script>
+    
+    <style>
         #main-header {
             position: relative;
             background: rgb(0, 0, 0) !important;

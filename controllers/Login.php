@@ -45,7 +45,7 @@ class Login extends DBConnection
                 }
             }
             
-            $this->settings->setUserData($key, $value);
+            $this->settings->setUserData("login_type", 1);
 
             return json_encode(['status' => 'success']);
             
@@ -59,7 +59,7 @@ class Login extends DBConnection
 
     public function logout() 
     {
-        if ($this->settings->sess_des()) {
+        if ($this->settings->sessDes()) {
             redirect('admin/login.php');
         }
     }
@@ -90,7 +90,7 @@ class Login extends DBConnection
 
         if ($this->conn->error) {
             $resp['status'] = "failed";
-            $resp['status'] = $this->conn->error;
+            $resp['_error'] = $this->conn->error;
         }
 
         return json_encode($resp);
@@ -99,7 +99,7 @@ class Login extends DBConnection
 
     public function logoutUser() 
     {
-        if ($this->settings->sess_des()) {
+        if ($this->settings->sessDes()) {
             redirect('./');
         }
     }

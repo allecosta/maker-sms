@@ -1,8 +1,8 @@
-<h1>Bem vindo(a) ao <?= $_settings->info("name"); ?></h1>
+<h1 class="">Bem vindo(a) ao <?= $_settings->info("name"); ?></h1>
 <hr>
 <div class="row">
     <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box- bg-light shadow">
+        <div class="info-box bg-light shadow">
             <span class="info-box-icon bg-info elevation-1"><i class="fas fa-th-list"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Pedido de Compra</span>
@@ -25,7 +25,7 @@
     </div>
     <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box bg-light shadow">
-            <span class="info-box-light bg-primary elevation-1"><i class="fas fa-exchange-alt"></i></span>
+            <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-exchange-alt"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Pedido Pendente</span>
                 <span class="info-box-number text-right">
@@ -46,7 +46,7 @@
         </div>
     </div>
     <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box- bg-light shadow">
+        <div class="info-box bg-light shadow">
             <span class="info-box-icon bg-success elevation-1"><i class="fas fa-file-invoice-dollar"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Vendas</span>
@@ -68,7 +68,7 @@
         </div>
     </div>
     <div class="col-12 col-sm-6 col-md-3">
-        <div class="info-box-light shadow">
+        <div class="info-box bg-light shadow">
             <span class="info-box-icon bg-lightblue elevation-1"><i class="fas fa-th-list"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Items</span>

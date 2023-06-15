@@ -121,7 +121,7 @@
         <div class="calendar-table"></div>
         <div class="calendar-time" style="display: none;"></div>
     </div>
-    <div class="drp calendar right">
+    <div class="drp-calendar right">
         <div class="calendar-table"></div>
         <div class="calendar-time" style="display: none;"></div>
     </div>
